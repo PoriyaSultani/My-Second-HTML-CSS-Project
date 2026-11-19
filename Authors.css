@@ -1,0 +1,902 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8eee3;
+    color: #171c2e;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+/* header */
+
+.header {
+    width: 100%;
+    height: 65px;
+    background-color: #111626;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo i{
+    font-size: 20px;
+    color: #d99a40;
+}
+
+
+.logo h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.logo h2 span {
+    color: #f6c65e;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+    padding-top: 10px;
+}
+
+.navbar a:hover{
+    color: #f6c65e;
+    text-decoration: underline;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #252b3e;
+    color: white;
+    font-size: 18px;
+}
+
+.login-btn {
+    background-color: #f6ca69;
+    color: #171c2e;
+    padding: 11px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* main */
+
+.authors-main {
+    width: 100%;
+    height: 400px;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(8, 15, 31, 0.90),
+        rgba(8, 15, 31, 0.25)
+    ),
+    url("images/Authors.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+}
+
+.authors-main-content {
+    color: white;
+}
+
+.authors-decoration {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #f4bd50;
+    margin-bottom: 5px;
+}
+
+.authors-decoration span {
+    width: 110px;
+    height: 2px;
+    background: #f4bd50;
+}
+
+.authors-decoration i {
+    font-size: 28px;
+}
+
+.authors-main h1 {
+    margin: 0;
+    font-size: 60px;
+    color: white;
+}
+
+.authors-main h1 strong {
+    color: #f4bd50;
+}
+
+.authors-main p {
+    margin: 7px 0 0;
+    font-size: 21px;
+    font-style: italic;
+    color: #f5e9d5;
+}
+
+
+/* main1 */
+
+.authors-main1 {
+    padding: 20px 2.5%;
+    background: #f8f6f3;
+}
+
+
+/* search */
+
+.authors-search {
+    max-width: 930px;
+    height: 48px;
+    margin: 0 auto 22px;
+    padding: 5px 7px 5px 20px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #eeecea;
+    border-radius: 30px;
+}
+
+.authors-search > i {
+    color: #101a34;
+    font-size: 20px;
+}
+
+.authors-search input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.authors-search button {
+    border: none;
+    border-radius: 25px;
+    background: #efa91e;
+    color: white;
+    padding: 10px 30px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* card */
+
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+.author-card {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+
+.author-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+/* img */
+
+.author-image {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+
+.author-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.4s;
+}
+
+.author-card:hover .author-image img {
+    transform: scale(1.05);
+}
+
+/* info */
+
+.author-info {
+    padding: 12px 12px 10px;
+}
+
+.author-info h2 {
+    font-size: 20px;
+    margin: 2px 0 8px;
+    color: #101a34;
+}
+
+.author-info p {
+    min-height: 43px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #20283b;
+}
+
+/* book */
+
+.author-books {
+    border-top: 1px solid #eee;
+    margin-top: 8px;
+    padding: 8px 0;
+    color: #444;
+    font-size: 16px;
+}
+
+.author-books i {
+    color: #c68b36;
+    margin-right: 5px;
+}
+
+.profile-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    padding: 10px;
+    background: #f4bd50;
+    color: #17213a;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    background: #e2a62e;
+}
+
+.profile-btn i {
+    font-size: 13px;
+}
+
+/* page */
+
+.authors-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 0;
+}
+
+.authors-pagination a {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #17213a;
+    border-radius: 50%;
+    color: #17213a;
+    font-size: 14px;
+}
+
+.authors-pagination a:hover,
+.authors-pagination a.page-active {
+    background: #efa91e;
+    border-color: #efa91e;
+}
+
+/* footer */
+
+.footer {
+    background-color: #111626;
+    color: white;
+    padding: 20px 28px 10px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1.1fr 1.3fr 1.5fr;
+    gap: 25px;
+    padding-bottom: 20px;
+}
+
+.footer-logo h2 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.footer-logo h2 span {
+    color: #f6c65e;
+}
+
+.footer-logo p {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #73798a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.footer-links a {
+    font-size: 11px;
+    color: #eee;
+}
+
+.footer-links a:hover {
+    color: #f6c65e;
+}
+
+.footer-decoration {
+    text-align: center;
+}
+
+.footer-decoration h2 {
+    font-size: 65px;
+    color: #c68b36;
+}
+
+.footer-decoration p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #777b87;
+    text-align: center;
+    padding-top: 13px;
+}
+
+.copyright p {
+    font-size: 11px;
+}
+
+
+/* Responsive */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Tablet and small laptops */
+
+@media (max-width: 992px) {
+    .header {
+        padding-left: 22px;
+        padding-right: 22px;
+        gap: 16px;
+    }
+
+    .navbar {
+        gap: 18px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Phones */
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        min-height: 65px;
+        padding: 12px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .logo h2 {
+        font-size: 22px;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+        padding: 6px 0 2px;
+    }
+
+    .navbar a {
+        padding-top: 0;
+        font-size: 15px;
+    }
+
+    .nav-buttons {
+        gap: 8px;
+    }
+
+    .login-btn {
+        padding: 9px 17px;
+    }
+
+    .main,
+    .books-main,
+    .authors-main,
+    .contact-main {
+        width: 100%;
+        min-height: 300px;
+        height: auto;
+        padding: 48px 22px;
+        background-position: center;
+    }
+
+    .main-content {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .main-content h1 {
+        font-size: clamp(30px, 8vw, 42px);
+    }
+
+    .main-content p {
+        font-size: 15px;
+    }
+
+    .main-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .books-main h1,
+    .authors-main h1,
+    .contact-main h1 {
+        font-size: clamp(34px, 9vw, 46px);
+    }
+
+    .books-main p,
+    .authors-main p,
+    .contact-main p {
+        font-size: 16px;
+    }
+
+    .search-box,
+    .books-search,
+    .authors-search {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .search-section {
+        padding: 16px;
+    }
+
+    .search-box {
+        min-height: 58px;
+        gap: 9px;
+        padding: 8px 10px 8px 14px;
+    }
+
+    .search-box input,
+    .books-search input,
+    .authors-search input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .search-box button,
+    .books-search button,
+    .authors-search button {
+        flex: 0 0 auto;
+        padding: 10px 16px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 16px;
+        row-gap: 18px;
+    }
+
+    .service {
+        border-right: 0;
+        padding: 8px 5px;
+    }
+
+    .service:nth-child(odd) {
+        border-right: 1px solid #cfc2b6;
+    }
+
+    .categories {
+        width: 100%;
+        padding: 20px 16px;
+    }
+
+    .section-heading {
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .category-card img {
+        height: 115px;
+    }
+
+    .best-sellers {
+        width: 100%;
+        padding: 20px 16px;
+    }
+
+    .books-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .book-card {
+        min-width: 0;
+    }
+
+    .book-card img {
+        width: min(100%, 125px);
+        height: 145px;
+        object-fit: cover;
+    }
+
+    .about-newsletter {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 20px 16px;
+    }
+
+    .about-image img {
+        height: 180px;
+    }
+
+    .newsletter {
+        border-left: 0;
+        border-top: 1px solid #c5b8ab;
+        padding: 18px 0 0;
+    }
+
+    .books-main1,
+    .authors-main1 {
+        width: 100%;
+        padding: 18px 16px;
+    }
+
+    .books-grid,
+    .authors-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .book-image {
+        height: 170px;
+    }
+
+    .author-image {
+        height: 170px;
+    }
+
+    .author-info h2 {
+        font-size: 17px;
+    }
+
+    .contact-main1 {
+        padding: 32px 16px 42px;
+    }
+
+    .contact-heading h2 {
+        font-size: 27px;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: 620px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .contact-info,
+    .contact-form-box {
+        width: 100%;
+        min-width: 0;
+        padding: 22px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 22px 18px 12px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 16px;
+    }
+
+    .footer-decoration {
+        text-align: left;
+    }
+}
+
+/* Narrow phones */
+
+@media (max-width: 480px) {
+    .header {
+        padding: 11px 12px;
+    }
+
+    .logo h2 {
+        font-size: 20px;
+    }
+
+    .user-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .login-btn {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+
+    .navbar {
+        gap: 9px 15px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .main,
+    .books-main,
+    .authors-main,
+    .contact-main {
+        min-height: 285px;
+        padding: 38px 16px;
+    }
+
+    .main-label {
+        font-size: 11px;
+    }
+
+    .main-content h1 {
+        font-size: 32px;
+    }
+
+    .main-content p {
+        font-size: 14px;
+    }
+
+    .shop-btn,
+    .learn-btn {
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        gap: 7px;
+        padding-left: 11px;
+    }
+
+    .search-box button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .category-card img {
+        height: 100px;
+    }
+
+    .category-card h3 {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .best-heading h2 {
+        font-size: 22px;
+    }
+
+    .books-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .book-card {
+        padding: 8px 6px;
+    }
+
+    .book-card img {
+        height: 125px;
+    }
+
+    .book-card button {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .books-grid,
+    .authors-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .book-image,
+    .author-image {
+        height: 145px;
+    }
+
+    .book-info h3 {
+        font-size: 14px;
+    }
+
+    .author-info {
+        padding: 10px 7px;
+    }
+
+    .author-info h2 {
+        font-size: 15px;
+    }
+
+    .author-info p {
+        font-size: 12px;
+    }
+
+    .profile-btn {
+        width: 100%;
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .books-categories {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .books-categories a {
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+
+    .books-search,
+    .authors-search {
+        gap: 8px;
+        padding-left: 12px;
+    }
+
+    .books-search button,
+    .authors-search button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .contact-info,
+    .contact-form-box {
+        padding: 18px;
+    }
+
+    .footer-content {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 20px 12px;
+    }
+
+    .footer-decoration h2 {
+        font-size: 48px;
+    }
+
+    .copyright p {
+        line-height: 1.5;
+    }
+}
